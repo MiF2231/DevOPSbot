@@ -21,7 +21,7 @@ services:
     depends_on:
       - db
     environment:
-      BOT_TOKEN: "8207878197:AAFvdw7NJS29Amwmlr5aBqGZ2BX6XFZSVYE"
+      BOT_TOKEN: ${BOT_TOKEN}
       DB_HOST: db
       DB_PORT: 3306
       DB_USER: bot_user
