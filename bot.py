@@ -11,10 +11,10 @@ dp = Dispatcher()
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
     await message.answer(
-        "Привет! Я DevOps CI/CD бот.\n"
-        "Отправь мне любое сообщение – я сохраню его в базу данных.\n"
-        "Команда /last покажет последние сохранённые сообщения."
-    )
+    "Привет! Я обновлённый DevOps CI/CD бот.\n"
+    "Я развёрнут через GitHub Actions и Docker."
+)
+
 
 @dp.message(Command("last"))
 async def cmd_last(message: types.Message):
