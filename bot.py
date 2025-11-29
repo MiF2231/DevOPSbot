@@ -12,7 +12,7 @@ dp = Dispatcher()
 async def cmd_start(message: types.Message):
     await message.answer(
     "Привет! Я обновлённый DevOps CI/CD бот.\n"
-    "Я развёрнут через GitHub Actions и Docker."
+    "Я развёрнут через GitHub Actions и Docker d."
 )
 
 
