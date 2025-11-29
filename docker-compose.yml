@@ -1,0 +1,32 @@
+services:
+  db:
+    image: mysql:8
+    container_name: mysql-lab-Kamalov
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: telegram_bot_db
+      MYSQL_USER: bot_user
+      MYSQL_PASSWORD: bot_password
+    ports:
+      - "3327:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./dbinit.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+  bot:
+    build: .
+    container_name: telegram-bot-Kamalov
+    restart: always
+    depends_on:
+      - db
+    environment:
+      BOT_TOKEN: "8207878197:AAFvdw7NJS29Amwmlr5aBqGZ2BX6XFZSVYE"
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: bot_user
+      DB_PASSWORD: bot_password
+      DB_NAME: telegram_bot_db
+
+volumes:
+  db_data:

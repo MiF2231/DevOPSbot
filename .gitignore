@@ -1,0 +1,23 @@
+# Виртуальные окружения
+venv/
+.env/
+
+# Файлы Python-кэша
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Логи
+*.log
+
+# Конфигурации IDE
+.vscode/
+.idea/
+
+# Docker-артефакты
+*.pid
+
+# Файлы ОС
+.DS_Store
+Thumbs.db
